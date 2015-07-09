@@ -16,7 +16,9 @@ def unique_chars(string):
                 index1 += 1
             index += 1
     return result
-import unittest
+
+def unique_chars_improve(string):
+    return len(set(string)) == len(string)
 
 class TestUniqueChars(object):
 
@@ -29,13 +31,6 @@ class TestUniqueChars(object):
 def main():
     test = TestUniqueChars()
     test.test_unique_chars(unique_chars)
-    try:
-        test.test_unique_chars(unique_chars_hash)
-        test.test_unique_chars(unique_chars_inplace)
-    except NameError:
-        # Alternate solutions are only defined
-        # in the solutions file
-        pass
 
 if __name__ == '__main__':
     main()
